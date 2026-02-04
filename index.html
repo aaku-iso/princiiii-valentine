@@ -74,10 +74,6 @@ button {
 button:hover {
     transform: scale(1.1);
 }
-
-iframe {
-    display: none;
-}
 </style>
 </head>
 
@@ -90,20 +86,10 @@ iframe {
     <button id="no">No 😢</button>
 </div>
 
-<!-- Paper Rings - Taylor Swift (YouTube embed) -->
-<iframe
-id="song"
-width="0"
-height="0"
-src="https://www.youtube.com/embed/8zdg-pDF10g?enablejsapi=1"
-allow="autoplay">
-</iframe>
-
 <script>
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 const card = document.getElementById("card");
-const songFrame = document.getElementById("song");
 
 /* No button escape */
 noBtn.addEventListener("mouseover", () => {
@@ -116,13 +102,11 @@ noBtn.addEventListener("mouseover", () => {
 
 /* Yes click */
 yesBtn.addEventListener("click", () => {
-    songFrame.src += "&autoplay=1";
-
     card.innerHTML = `
         <h1>YAYYYYY 💖🎉</h1>
-        <p>I like shiny things, but I’d marry you with paper rings 💍</p>
         <p>I love you so much, Princiiii ❤️</p>
-        <p>Forever yours,<br><b>Akanksha</b></p>
+        <p>You are my favorite person.</p>
+        <p style="margin-top:15px;">— Akanksha 💞</p>
     `;
 });
 
